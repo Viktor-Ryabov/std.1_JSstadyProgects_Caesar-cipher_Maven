@@ -14,7 +14,10 @@ public class App {
         InitialData initialData = new InitialData();
         initialData.run();
 
-        FileManager fileManager = new FileManager();
-        fileManager.run();
+        Informer informer = new Informer();
+        informer.run();
+
+//        FileManager fileManager = new FileManager();
+//        fileManager.run();
     }
 }
