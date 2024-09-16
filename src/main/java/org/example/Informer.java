@@ -8,7 +8,8 @@ public class Informer implements Runnable {
         System.out.println("Входные данные: ");
         System.out.println("1. Адрес файла: " + Constants.FILEADRESS);
         System.out.println("2. Ключ для кодировки: " + Constants.getKEYCIPHERNUMBER());
-        System.out.println("3. Измененный алфавит для кодировки: " + Constants.NEWALPHABETSTRING);
+        System.out.println("3. char[] NEWALPHABET: " + Constants.getNEWALPHABET());
+        System.out.println("4. Измененный алфавит для кодировки: " + Constants.getNEWALPHABETSTRING());
         System.out.println("-------------");
     }
 }

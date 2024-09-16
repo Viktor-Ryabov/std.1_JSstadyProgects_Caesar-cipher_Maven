@@ -14,20 +14,30 @@ public class Constants {
             ':', '!', '?', ' '};
     public static int KEYCIPHERNUMBER = 0;
     public static String FILEADRESS = "";
+    public static char[] NEWALPHABET = new MakeNewAlphabet(ALPHABET, getKEYCIPHERNUMBER()).getCodeAlphabet();
+    public static String NEWALPHABETSTRING = new MakeNewAlphabet(ALPHABET, getKEYCIPHERNUMBER()).printCodeArray();
 
     public static void setKEYCIPHERNUMBER(int KEYCIPHERNUMBER) {
         Constants.KEYCIPHERNUMBER = KEYCIPHERNUMBER;
     }
-    public static int getKEYCIPHERNUMBER() {
-        return KEYCIPHERNUMBER;
-    }
-
     public static void setFILEADRESS(String FILEADRESS) {
         Constants.FILEADRESS = FILEADRESS;
     }
 
 
-    public static char[] NEWALPHABET = new MakeNewAlphabet(ALPHABET, getKEYCIPHERNUMBER()).getCodeAlphabet();
-    public static String NEWALPHABETSTRING = new MakeNewAlphabet(ALPHABET, getKEYCIPHERNUMBER()).getCodeAlphabetAsString();
+    public static int getKEYCIPHERNUMBER() {
+        return KEYCIPHERNUMBER;
+    }
 
+    public static String getFILEADRESS() {
+        return FILEADRESS;
+    }
+
+    public static char[] getNEWALPHABET() {
+        return NEWALPHABET;
+    }
+
+    public static String getNEWALPHABETSTRING() {
+        return NEWALPHABETSTRING;
+    }
 }

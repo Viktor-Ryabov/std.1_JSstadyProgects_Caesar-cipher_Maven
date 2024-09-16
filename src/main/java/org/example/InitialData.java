@@ -14,6 +14,8 @@ public class InitialData implements Runnable {
         System.out.println("Введите значение кодировки для зашифровки: ");
         Constants.setKEYCIPHERNUMBER(scanner.nextInt());
 
+        MakeNewAlphabet makeNewAlphabet = new MakeNewAlphabet(Constants.ALPHABET, Constants.getKEYCIPHERNUMBER());
+
 
     }
 }

@@ -23,7 +23,6 @@ public class CipherEncoder implements Runnable {
     }
 
     public void run() {
-
         String[] textArr = null;
         for (int i = 0; i < text.length(); i++) {
             if (isCharAtInitialAlphabet(text.charAt(i))) {

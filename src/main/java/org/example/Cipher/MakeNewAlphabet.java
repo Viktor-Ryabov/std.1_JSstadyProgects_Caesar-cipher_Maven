@@ -4,7 +4,7 @@ import org.example.Constants;
 
 public class MakeNewAlphabet {
     char[] codeAlphabet = Constants.ALPHABET;
-    String[] codeAplhabetStringEl = new String[codeAlphabet.length];
+    String codeAlohabetString = "";
     int keyNumber;
 
     public MakeNewAlphabet(char[] codeAlphabet, int keyNumber) {
@@ -16,10 +16,8 @@ public class MakeNewAlphabet {
         for (int i = 0; i < Constants.ALPHABET.length; i++) {
             if(i != Constants.ALPHABET.length - 1){
                 codeAlphabet[i] = Constants.ALPHABET[i + keyNumber];
-                codeAplhabetStringEl[i] =  Character.toString(codeAlphabet[i]);
             } else {
                 codeAlphabet[i] = Constants.ALPHABET[0];
-                codeAplhabetStringEl[i] =  Character.toString(codeAlphabet[i]);
             }
         }
     }
@@ -28,7 +26,10 @@ public class MakeNewAlphabet {
         return codeAlphabet;
     }
 
-    public String getCodeAlphabetAsString(){
-        return String.join(" ", codeAplhabetStringEl);
+    public String printCodeArray(){
+        for (int i = 0; i < codeAlphabet.length; i++) {
+            codeAlohabetString += String.valueOf(codeAlphabet[i]) + " ";
+        }
+        return codeAlohabetString;
     }
 }
