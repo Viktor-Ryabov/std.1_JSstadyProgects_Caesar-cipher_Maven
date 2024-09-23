@@ -5,11 +5,13 @@ import org.example.Cipher.MakeNewAlphabet;
 
 public class Informer implements Runnable {
     public void run() {
-        System.out.println("Входные данные: ");
-        System.out.println("1. Адрес файла: " + Constants.FILEADRESS);
-        System.out.println("2. Ключ для кодировки: " + Constants.getKEYCIPHERNUMBER());
-        System.out.println("3. char[] NEWALPHABET: " + Constants.getNEWALPHABET());
-        System.out.println("4. Измененный алфавит для кодировки: " + Constants.getNEWALPHABETSTRING());
+        int i = 0;
+        System.out.println("Входные данные сформированы: ");
+        System.out.println(++i + " Адрес файла: " + Constants.FILEADRESS);
+        System.out.println(++i + " Ключ для кодировки: " + Constants.getKEYCIPHERNUMBER());
+        System.out.println(++i + " Изначальный алфавит: " + String.valueOf(Constants.ALPHABET));
+        System.out.println(++i + " Измененный алфавит для кодировки: " + String.valueOf(Constants.getNEWALPHABET()));
+        System.out.println(++i + " char[] NEWALPHABET: " + Constants.getNEWALPHABET());
         System.out.println("-------------");
     }
 }
