@@ -16,7 +16,7 @@ public class InitialData implements Runnable {
         System.out.println("ВВод данных закончен.");
         System.out.println("-------------");
         System.out.println("Формируем алфавит шиврофания (в InitialData): ");
-        MakeNewAlphabet makeNewAlphabet = new MakeNewAlphabet(Constants.ALPHABET, Constants.getKEYCIPHERNUMBER());
+        MakeNewAlphabet makeNewAlphabet = new MakeNewAlphabet(Constants.getALPHABET(), Constants.getKEYCIPHERNUMBER());
         Constants.setNEWALPHABET(makeNewAlphabet.createAndGetANewAlphabet());
         System.out.println("Алфавит шиврофания сформирован...");
         System.out.println("-------------");

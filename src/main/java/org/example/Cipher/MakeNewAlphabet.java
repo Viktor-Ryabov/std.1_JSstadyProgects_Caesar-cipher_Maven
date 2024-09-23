@@ -3,28 +3,27 @@ package org.example.Cipher;
 import org.example.Constants;
 
 public class MakeNewAlphabet {
-    char[] codeAlphabet = Constants.ALPHABET;
-    char[] newAlphabet = Constants.ALPHABET;
-    String codeAlohabetString = "";
+    char[] standartAlphabet = Constants.getALPHABET();
+    char[] newAlphabet = Constants.getALPHABET().clone();
     int keyNumber = Constants.getKEYCIPHERNUMBER();
 
-    public MakeNewAlphabet(char[] codeAlphabet, int keyNumber) {
-        this.codeAlphabet = codeAlphabet;
+    public MakeNewAlphabet(char[] standartAlphabet, int keyNumber) {
+        this.standartAlphabet = standartAlphabet;
         this.keyNumber = keyNumber;
     }
 
     public char[] createAndGetANewAlphabet() {
-        int maxIndex = Constants.ALPHABET.length - 1;
+        int maxIndex = standartAlphabet.length - 1;
         int currentI;
-        for (int i = 0; i < Constants.ALPHABET.length; i++) {
+        for (int i = 0; i < standartAlphabet.length; i++) {
             currentI = i + keyNumber;
-            if(i != Constants.ALPHABET.length - 1){
+            if(i != standartAlphabet.length - 1){
                 if((i + keyNumber) > maxIndex){
                     currentI = (i + keyNumber) - maxIndex;
                 }
-                newAlphabet[i] = Constants.ALPHABET[currentI];
+                newAlphabet[i] = standartAlphabet[currentI];
             } else {
-                newAlphabet[i] = Constants.ALPHABET[0];
+                newAlphabet[i] = standartAlphabet[0];
             }
         }
         System.out.println("method makeNewAlphabet: " + String.valueOf(newAlphabet));

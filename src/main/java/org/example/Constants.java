@@ -18,6 +18,9 @@ public class Constants {
 
 
     //ALPHABET
+    public static char[] getALPHABET() {
+        return ALPHABET;
+    }
 
     //FILEADRESS
     public static void setFILEADRESS(String FILEADRESS) {
