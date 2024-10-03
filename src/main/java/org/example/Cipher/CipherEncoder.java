@@ -33,4 +33,6 @@ public class CipherEncoder implements Runnable {
         }
         resultText = Arrays.toString(textArr);
     }
+
+
 }

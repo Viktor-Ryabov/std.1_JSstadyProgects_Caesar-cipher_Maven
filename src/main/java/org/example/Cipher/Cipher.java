@@ -9,8 +9,4 @@ public class Cipher {
     public Cipher(char[] incomeArray) {
         this.incomeArray = incomeArray;
     }
-
-    CipherEncoder cipherEncoder = new CipherEncoder(FileManager.fileDataToString, Constants.getKEYCIPHERNUMBER());
-
-
 }

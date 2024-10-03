@@ -3,19 +3,21 @@ package org.example;
 import java.io.*;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.List;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 
-public class FileManager implements Runnable {
-    public static String fileDataToString = "";
-    public void run() {
-        try(BufferedReader reader = new BufferedReader(new FileReader(Constants.FILEADRESS))){
-            String line;
-            while((line = reader.readLine()) != null){
-                System.out.println(line + "\n");
-                fileDataToString += line;
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        System.out.println(fileDataToString);
+public class FileManager {
+
+    public void getInputFileData(String adress) throws IOException {
+       List<String> lines = Files.readAllLines(Paths.get(adress));
+       for (String s: lines){
+           System.out.println(s);
+       }
     }
+
+//    public void printInputFileData(String fileadress){
+//        printInputFileData(fileadress);
+//    }
 }
